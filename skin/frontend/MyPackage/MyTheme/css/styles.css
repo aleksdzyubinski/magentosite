@@ -1318,6 +1318,18 @@ a.button:hover {
 .footer-container {
   padding-top: 0px;
 }
+/* -------------------------------------------- *
+ * Before header menu+language
+ */
+.before_header{
+	position: relative;
+	height: 50px;
+	max-width: 1050px;
+	margin: 0 auto;
+	padding-top: 15px;
+}
+
+
 
 /* -------------------------------------------- *
  * Column Layouts
