@@ -27,12 +27,15 @@
  * @var Mage_Page_Block_Html_Header $this
  */
 ?>
-
-<div class="header-language-background">
-    <div class="header-language-container">
-        <div class="store-language-container">
+<div class="before_header" style="height: 100px">
+<div class="store-language-container">
             <?php echo $this->getChildHtml('store_language') ?>
         </div>
+</div>
+
+<div class="header-language-background" >
+    <div class="header-language-container">
+        
 
         <?php echo $this->getChildHtml('currency_switcher') ?>
 
@@ -63,10 +66,6 @@
                 <span class="icon"></span>
                 <span class="label"><?php echo $this->__('Search'); ?></span>
             </a>
-
-           
-
-
         </div>
 
         <!-- Navigation -->
