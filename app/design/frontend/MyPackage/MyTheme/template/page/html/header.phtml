@@ -27,9 +27,30 @@
  * @var Mage_Page_Block_Html_Header $this
  */
 ?>
-<div class="before_header" style="height: 100px">
-<div class="store-language-container">
+
+<style>
+   ul.hr {
+    margin: 0; /* Обнуляем значение отступов */
+    font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+   }
+   ul.hr li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 10px; /* Отступ слева */
+   }
+  </style>
+
+<div class="before_header" style="">
+<div class="store-language-container" style="float: right">
             <?php echo $this->getChildHtml('store_language') ?>
+        </div>
+        
+        <div style="float: left">
+          <ul class="hr">
+		    <li>My Account</li>
+		    <li>My Wishlist</li>
+		    <li>My Cart</li>
+		    <li>Log In</li>
+	        </ul>  
         </div>
 </div>
 
@@ -41,6 +62,16 @@
 
         <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getChildHtml('accountLinks') ?></p>
     </div>
+    <div style="float: right">
+          <ul class="hr" style="color: white">
+		    <li>HOME</li>
+		    <li>ABOUT</li>
+		    <li>CUSTOMER SERVICE</li>
+		    <li>SITE MAP</li>
+            <li>SEARCH TERMS</li>
+            <li>CONTACTS</li>
+	        </ul>  
+        </div>
 </div>
 
 <header id="header" class="page-header">
