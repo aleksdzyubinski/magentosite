@@ -1296,6 +1296,7 @@ a.button:hover {
   max-width: 1260px;
   margin: 0 auto;
   padding: 15px;
+  background: #FFFFFF;
 }
 .main-container:after,
 .footer-container:after {
@@ -3151,7 +3152,8 @@ body {
   min-width: 320px;
   min-height: 100%;
   margin: 0 auto;
-  background: #FFFFFF;
+  background-image: url("../images/media/bg.jpg");
+  /*background: #FFFFFF;*/
 }
 
 .wrapper:after {
@@ -3167,7 +3169,9 @@ body {
   .page-header {
     max-width: 1260px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding-right: 30px;
+	padding-left: 0px;
+	background: #FFFFFF;
   }
 
   .page-header-container {
@@ -3183,9 +3187,11 @@ body {
  * Language switcher + welcome message
  * ============================================ */
 .header-language-background {
-  padding: 10px;
-  background-color: #858D90;
+  padding: 15px;
+  background-color: #535355;
   text-transform: uppercase;
+  max-width: 1260px;
+  margin: 0 auto;
 }
 .header-language-background .header-language-container {
   max-width: 1200px;
@@ -3470,7 +3476,7 @@ a.skip-link {
 @media only screen and (min-width: 771px) {
   .nav-primary {
     display: block;
-    margin-top: 0px;
+    margin-top: 10px;
   }
 }
 /* ============================================ *
