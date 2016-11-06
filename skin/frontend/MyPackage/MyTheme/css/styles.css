@@ -1293,9 +1293,9 @@ a.button:hover {
 .main-container,
 .footer-container {
   position: relative;
-  max-width: 1260px;
+  max-width: 1050px;
   margin: 0 auto;
-  padding: 15px;
+  /*padding: 0px;*/
   background: #FFFFFF;
 }
 .main-container:after,
@@ -1306,10 +1306,14 @@ a.button:hover {
 }
 
 @media only screen and (min-width: 480px) {
-  .main-container,
-  .footer-container {
-    padding: 30px;
+  .main-container{
+    padding: 0px;
   }
+  .footer-container {
+    padding-left: 15px;
+	padding-right: 15px;
+  }
+  
 }
 .footer-container {
   padding-top: 0px;
@@ -3167,7 +3171,7 @@ body {
  * ============================================ */
 @media only screen and (min-width: 771px) {
   .page-header {
-    max-width: 1260px;
+    max-width: 1050px;
     margin: 0 auto;
     padding-right: 30px;
 	padding-left: 0px;
@@ -3190,7 +3194,7 @@ body {
   padding: 15px;
   background-color: #535355;
   text-transform: uppercase;
-  max-width: 1260px;
+  max-width: 1050px;
   margin: 0 auto;
 }
 .header-language-background .header-language-container {
@@ -3988,7 +3992,7 @@ a.skip-link {
 }
 @media only screen and (max-width: 479px) {
   .footer {
-    padding-top: 15px;
+    padding-top: 0px;
   }
 }
 .footer .block-title {
@@ -3996,7 +4000,7 @@ a.skip-link {
   padding: 3px 0;
 }
 .footer .block-title strong {
-  font-weight: normal;
+  font-weight: bold;
 }
 .footer .block-title,
 .footer address {
@@ -4004,7 +4008,7 @@ a.skip-link {
 }
 .footer .links {
   float: left;
-  width: 17%;
+  width: 25%;
   padding: 0 30px 0 0;
   margin-bottom: 30px;
 }
