@@ -1,0 +1,97 @@
+<!-------------------------------------------------
+CMS => Pages => "Home Page" (Madison Island)
+--------------------------------------------------->
+
+<div  width: 1050px; height: 545px;">
+    
+    <div style="float:left; margin: 15px">
+  <img src="{{media url="wysiwyg/first_box.jpg"}}" alt="" />
+   </div>
+     
+   <div style="float: right; margin-top: 15px; margin-bottom: 20px; margin-right: 15px; position: relative">
+    <img src="{{media url="wysiwyg/second_box.jpg"}}" alt="" />
+   </div>
+     
+   <div  style="float: right; margin-bottom: 15px; margin-right: 15px; position: relative">
+    <img src="{{media url="wysiwyg/third_box.jpg"}}" alt="" />
+   </div>
+   
+    <div style=" float:left; margin-left: 15px; margin-right: 15px; margin-bottom: 15px" >
+    <img src="{{media url="wysiwyg/forth_box.jpg"}}" alt="" />
+     </div>
+     
+     <div style=" float:right; margin-right: 15px; margin-bottom: 15px">
+   <img src="{{media url="wysiwyg/fifth_box.jpg"}}" alt="" />
+   </div>
+</div>
+
+
+<!-------------------------------------------------
+CMS => Static Blocks => "Footer Links Company" 
+id: footer_links_company
+--------------------------------------------------->
+
+<div style="margin:0 auto;">
+
+<div class="links">
+	<div class="block-title">
+		<strong><span style="color: black">INFORMATION</span></strong>
+	</div>
+	<ul style="text-transform: capitalize">
+		<li>About Us</li>
+		<li>Customer Service</li>
+		<li>Privacy Policy</li>
+		<li>Site Map</li>
+                <li>Search Terms</li>
+                <li>Advanced Search</li>
+                <li>Orders and Rerurns</li>
+                <li>Contact Us</li>
+	</ul>
+</div>
+
+<div class="links">
+	<div class="block-title">
+		<strong><span style="color: black">WHY BUY FROM US</span></strong>
+	</div>
+	<ul style="text-transform: capitalize">
+		<li>Shipping & Returns</li>
+		<li>Secure Shopping</li>
+		<li>International Shipping</li>
+		<li>Affiliates</li>
+                <li>Group Sales</li>
+	</ul>
+</div>
+
+<div class="links">
+	<div class="block-title">
+		<strong><span style="color: black">MY ACCOUNT</span></strong>
+	</div>
+	<ul style="text-transform: capitalize">
+		<li>Sign In</li>
+		<li>View Cart</li>
+		<li>My Wishlist</li>
+		<li>Track My Order</li>
+                <li>Help</li>
+	</ul>
+</div>
+
+<div class="links social-media">
+	<div class="block-title">
+		<strong><span style="color: black">CONTACTS</span></strong>
+	</div>
+	<ul style="text-transform: capitalize">
+                <li>38 Anson Road </li>
+                <li>Martlesham Heath</li>
+                <li style="padding-top: 10px; padding-button:5px; color: #1ebd9d; font-size: 16px; font-weight: bold;">TEL: 1(245)587-36-56</li>
+                <li style="display: inline-block; margin-right: 10px"><img src="{{media url="wysiwyg/facebook.jpg"}}" alt="" /></li>
+                <li style="display: inline-block; margin-right: 10px"> <img src="{{media url="wysiwyg/twitter.jpg"}}" alt="" /></li>
+                 <li style="display: inline-block; margin-right: 10px"><img src="{{media url="wysiwyg/rss.jpg"}}" alt="" /></li>
+	</ul>
+</div>
+
+<div>
+
+
+<!-------------------------------------------------
+CMS => Static Blocks => "Footer Links SM" -> Disabled
+--------------------------------------------------->
