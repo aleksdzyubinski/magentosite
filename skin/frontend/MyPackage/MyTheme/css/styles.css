@@ -3397,8 +3397,9 @@ a.skip-link {
  * ============================================ */
 .skip-content {
   display: none;
+  /*position: relative;
+ right: 200px;*/
 }
-
 .skip-content.skip-active {
   display: block;
   background: #EDEDED;
@@ -3476,15 +3477,19 @@ a.skip-link {
  * ============================================ */
 @media only screen and (max-width: 770px) {
   #header-nav {
-    padding: 5px 0;
+    padding:  0;
   }
 }
 @media only screen and (min-width: 771px) {
   #header-nav {
     display: block;
+	text-align: right;
     /* Force visibility */
     /*border-bottom: 1px solid #ededed;*/
   }
+}
+.view-all {
+    display: none;
 }
 /* ============================================ *
  * Nav Primary
@@ -3492,7 +3497,7 @@ a.skip-link {
 @media only screen and (min-width: 771px) {
   .nav-primary {
     display: block;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
   }
 }
 /* ============================================ *
@@ -3519,7 +3524,8 @@ a.skip-link {
 }
 
 .nav-primary li.level0 > a {
-  text-transform: uppercase;
+	font-weight: bold;
+  /*text-transform: uppercase;*/
 }
 
 /* ============================================ *
@@ -3529,6 +3535,7 @@ a.skip-link {
   .nav-primary a.level0,
   .nav-primary a {
     line-height: 35px;
+	
   }
   .nav-primary li.level0 ul {
     display: none;
@@ -3587,7 +3594,7 @@ a.skip-link {
     /* Level 1+ */
   }
   .nav-primary a.level0 {
-    padding: 0 25px;
+    padding: 0 15px;
   }
   .nav-primary li.level0,
   .nav-primary a.level0 {
@@ -3596,9 +3603,12 @@ a.skip-link {
   .nav-primary li:last-child > a {
     border-bottom: none;
   }
-  .nav-primary a:hover,
+ /* .nav-primary a:hover,
   .nav-primary li:hover > a {
     color: #3399cc;
+  }*/
+   .nav-primary a:hover {
+    background-color: #6fcfbc;
   }
   .nav-primary .menu-active {
     z-index: 200;
@@ -3611,15 +3621,18 @@ a.skip-link {
     top: 30px;
     /* Height of ".nav-primary a.level0" */
     z-index: 10;
-    width: 250px;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 150px;
+	text-align: left;
+	padding-left: 15px;
+    /*padding-right: 10px;*/
     display: none;
     /* Hide until displayed. */
   }
   .nav-primary li.level1 ul {
-    left: 60px;
+    left: 130px;
     top: 15px;
+	text-align: left;
+	padding-left: 15px;
   }
   .nav-primary li.level0 ul.level0.position-test {
     display: block;
@@ -5837,6 +5850,9 @@ p.product-name a:hover {
 }
 .block-related .block-title {
   border-bottom: none;
+}
+.block-title {
+  border-top: none;
 }
 .block-related .block-title h2 {
   margin: 0;
