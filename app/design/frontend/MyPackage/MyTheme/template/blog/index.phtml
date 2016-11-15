@@ -1,0 +1,50 @@
+<style>
+    .hero {
+        position:relative;
+        background-color: #f3f3f3;
+        height: auto;
+        /*height:50px !important;*/
+        /*width:100% !important;*/
+        border-radius: 3px;
+        padding: 10px;
+        margin-left: 25px;
+    }
+
+    .hero:after {
+        content:'';
+        position: absolute;
+        top: 100%;
+        left: 20%;
+        margin-left: 0px;
+        width: 0;
+        height: 0;
+        border-top: solid 20px #f3f3f3;
+        border-left: solid 20px transparent;
+        border-right: solid 20px transparent;
+    }
+</style>
+
+
+<div style="margin: auto; padding: 20px 0px 25px 15px">
+<div style="float: left; font-weight: bold; text-transform: uppercase">
+    <h1 style="color: black; padding-bottom: 0px">Testimonials</h1>
+</div>
+<div style="float: right">
+    <button style="color: white; background-color: #1ebd9d; box-shadow: none; border: 0px; font-weight: bold; padding: 7px">SUBMIT YOUR TESTIMONIAL</button>
+</div>
+</div>
+<?php
+    $article = Mage::registry('article');
+    echo '<div style="padding-top: 30px; margin: 0 auto">';
+
+    foreach ($article as $item)
+    {
+        echo '<div class="hero">';
+        echo $item['content'];
+        echo '</div>';
+        echo '<div style="margin-top: 25px; margin-left: 15%; margin-bottom: 30px">' .$item['created_date'] . '</div>';
+
+       /* echo '<h2>' .$item['content'] .$item['created_date'] .'</h2>';*/
+    }
+
+    echo '</div>';

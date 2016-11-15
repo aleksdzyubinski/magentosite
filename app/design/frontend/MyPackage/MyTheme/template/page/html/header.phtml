@@ -39,20 +39,14 @@
    }
   </style>
 
-<div class="before_header" style="">
-<div class="store-language-container" style="float: right">
-            <?php echo $this->getChildHtml('store_language') ?>
+        <div class="before-header" style="height: 160px">
+        <div class="store-language-container" style="float: right">
+                    <?php echo $this->getChildHtml('store_language') ?>
         </div>
-        
-        <div style="float: left">
-          <ul class="hr">
-		    <li>My Account</li>
-		    <li>My Wishlist</li>
-		    <li>My Cart</li>
-		    <li>Log In</li>
-	        </ul>  
+           <div style="float: left; display: inline">
+            <?php echo $this->getChildHtml('topLinks') ?>
+            </div>
         </div>
-</div>
 
 <div class="header-language-background" >
     <div class="header-language-container">
@@ -101,10 +95,12 @@
 
         <!-- Navigation -->
 
+       <div id="navi-menu">
         <div id="header-nav" class="skip-content">
             <?php echo $this->getChildHtml('topMenu') ?>
         </div>
-
+        </div>
+        
         <!-- Search -->
         <div>
             <div id="header-search" class="skip-content">
