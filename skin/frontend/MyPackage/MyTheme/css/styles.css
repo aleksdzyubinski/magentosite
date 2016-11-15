@@ -1290,14 +1290,21 @@ a.button:hover {
 /* -------------------------------------------- *
  * Container
  */
-.main-container,
 .footer-container {
   position: relative;
   max-width: 1050px;
   margin: 0 auto;
-  /*padding: 0px;*/
   background: #FFFFFF;
 }
+
+.main-container{
+  position: relative;
+  max-width: 1050px;
+  padding-top: 0px;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+
 .main-container:after,
 .footer-container:after {
   content: '';
@@ -1321,7 +1328,7 @@ a.button:hover {
 /* -------------------------------------------- *
  * Before header menu+language
  */
-.before_header{
+.before-header{
 	position: relative;
 	height: 50px;
 	max-width: 1050px;
@@ -1362,6 +1369,7 @@ a.button:hover {
   float: right;
   width: 25%;
   padding-right: 0;
+  background-color: #adbdba;
   /* Remove the 15px padding */
 }
 .col-right img {
@@ -1377,6 +1385,7 @@ a.button:hover {
   float: none;
   width: auto;
   padding: 0;
+  padding-top: 0px;
   /* Remove the 15px padding */
 }
 
@@ -3397,8 +3406,8 @@ a.skip-link {
  * ============================================ */
 .skip-content {
   display: none;
-  /*position: relative;
- right: 200px;*/
+
+  /*position: relative;*/
 }
 .skip-content.skip-active {
   display: block;
@@ -3478,7 +3487,15 @@ a.skip-link {
 @media only screen and (max-width: 770px) {
   #header-nav {
     padding:  0;
+	/*vertical-align: middle;*/
   }
+}
+
+#navi-menu{
+	position: absolute;
+	top: 65%;
+	left: 170px;
+	width: 880px;
 }
 @media only screen and (min-width: 771px) {
   #header-nav {
@@ -3486,6 +3503,7 @@ a.skip-link {
 	text-align: right;
     /* Force visibility */
     /*border-bottom: 1px solid #ededed;*/
+	/*vertical-align: middle;*/
   }
 }
 .view-all {
