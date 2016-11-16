@@ -4049,6 +4049,14 @@ a.skip-link {
 .footer address {
   color: #3399cc;
 }
+
+.header-links .links li{
+	display: inline;
+	margin-right: 15px;
+}
+.header-links .links a{
+	color: #545456;
+}
 .footer .links {
   float: left;
   width: 25%;

@@ -1,0 +1,70 @@
+
+#customers-name{
+	margin-top: 25px; 
+	margin-left: 5%; 
+	margin-bottom: 30px; 
+	font-weight: bold; 
+	text-transform: capitalize;
+}
+
+.hero {
+	position:relative;
+	background-color: #f3f3f3;
+	height: auto;
+	/*height:50px !important;*/
+	/*width:100% !important;*/
+	border-radius: 3px;
+	padding: 10px;
+	margin-left: 25px;
+}
+
+.hero:after {
+	content:'';
+	position: absolute;
+	top: 100%;
+	left: 5%;
+	margin-left: 0px;
+	width: 0;
+	height: 0;
+	border-top: solid 20px #f3f3f3;
+	border-left: solid 20px transparent;
+	border-right: solid 20px transparent;
+}
+
+#paginator {
+	border-bottom: 1px solid #ededed;
+	border-top: 1px solid #ededed;
+	padding: 10px;
+	margin: 25px 0px 25px 25px;
+}
+
+#top-content{
+	margin: auto;
+	padding: 20px 0px 25px 15px;
+}
+
+#login-text{
+	float: right;
+	text-transform: uppercase;
+}
+
+.testimonials-text{
+	float: left;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.testimonials-text h1{
+	color: black;
+	padding-bottom: 0px;
+}
+
+.submit-button{
+	float: right;
+	color: white;
+	background-color: #1ebd9d;
+	box-shadow: none;
+	border: 0px;
+	font-weight: bold;
+	padding: 7px;
+}
