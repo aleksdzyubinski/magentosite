@@ -31,11 +31,44 @@
 	border-right: solid 20px transparent;
 }
 
-#paginator {
+.pagination {
 	border-bottom: 1px solid #ededed;
 	border-top: 1px solid #ededed;
-	padding: 10px;
 	margin: 25px 0px 25px 25px;
+	/*height: 57px;*/
+	padding: 10px;
+}
+
+.pagination .pager.pager-no-toolbar{
+	float: none;
+	margin-bottom: 0px;
+}
+.pagination .pager.pager-no-toolbar .count-container{
+	
+	float: left;	
+}
+
+.pagination .pager.pager-no-toolbar .pages strong{
+	font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+	display: inline;
+	float: left;
+	box-sizing: inherit;
+	padding-right: 10px;
+}
+
+.pagination .pager.pager-no-toolbar .pages ol{
+	display: inline;
+	box-sizing: inherit;
+}
+
+.pagination .pager.pager-no-toolbar .pages{
+	display: inline;
+	box-sizing: content-box;
+}
+
+select {
+	border-radius: 5px;
+	border-width: 1px;
 }
 
 #top-content{
