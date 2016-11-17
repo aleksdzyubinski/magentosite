@@ -107,11 +107,13 @@
                 </connection>
             </blog_read>
         </resources>
+
         <blocks>
             <blog>
                 <class>Snowcore_Blog_Block</class>
             </blog>
         </blocks>
+
         <helpers>
             <blog>
                 <class>Snowcore_Blog_Helper</class>

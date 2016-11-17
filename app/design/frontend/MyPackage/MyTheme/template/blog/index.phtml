@@ -1,41 +1,27 @@
-
-<div id="top-content">
-<div class="testimonials-text">
-    <h1>Testimonials</h1>
-</div>
-
-    <?php
-    if (Mage::getSingleton('customer/session')->isLoggedIn())
-    {
-    echo '<button class="submit-button">SUBMIT YOUR TESTIMONIAL</button>';
-    }
-    else{
-        echo '<div id="login-text">';
-        echo 'To leave a feedback you need to log in ';
-        echo '</div>';
-    }
-    ?>
-
-</div>
-<?php
-    $article = Mage::registry('article');
-    echo '<div style="padding-top: 30px; margin: 0 auto">';
-
-    foreach ($article as $item)
-    {
-        $customer_id = $item['customer_id'];
-        $customer = Mage::getModel('customer/customer')->load($customer_id);
-
-        echo '<div class="hero">';
-        echo $item['content'];
-        echo '</div>';
-        echo '<div id="customers-name">';
-        echo  $customer->getData('firstname') . ' ' . $customer->getData('lastname');
-        echo '</div>';
-    }
-    $rows = count($article);
-    echo '</div>';
-    echo '<div id="paginator">';
-
-    //echo '1-'. $rows. ' of ' .$rows;
-    echo '</div>';
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<?php $collection = $this->getCollection();
+$collection->setOrder('created_date', 'DESC');?>
+    <div id="top-content">
+        <div class="testimonials-text">
+            <h1><?php echo $this->__('Testimonials') ?></h1>
+        </div>
+        <?php echo $this->showButton(); ?>
+    </div>
+<?php if($collection->getSize()): ?>
+    <div style="padding-top: 30px; margin: 0 auto">
+    <?php foreach ($collection as $item): ?>
+        <div class="hero">
+            <?php echo $item['content']; ?>
+        </div>
+        <div id="customers-name">
+            <?php $customer = Mage::getModel('customer/customer')->load($item['customer_id']); ?>
+            <?php echo  $customer->getData('firstname') . ' ' . $customer->getData('lastname'); ?>
+        </div>
+    <?php endforeach; ?>
+    </div>
+    <div class="pagination">
+    <?php echo $this->getPagerHtml(); ?>
+    </div>
+<?php else: ?>
+    <br><p><?php echo $this->__('The collection is empty.'); ?></p>
+<?php endif ?>

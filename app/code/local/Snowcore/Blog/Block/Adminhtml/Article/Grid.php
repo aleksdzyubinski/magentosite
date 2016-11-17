@@ -6,7 +6,7 @@ class Snowcore_Blog_Block_Adminhtml_Article_Grid extends Mage_Adminhtml_Block_Wi
         parent::__construct();
         $this->setId('blogArticleGrid');
         $this->setDefaultSort('article_id');
-        $this->setDefaultDir('ASC');
+        $this->setDefaultDir('DESC');
         $this->setSaveParametersInSession(true);
     }
 
@@ -21,7 +21,7 @@ class Snowcore_Blog_Block_Adminhtml_Article_Grid extends Mage_Adminhtml_Block_Wi
     {
         $this->addColumn('article_id', array(
          'header'    => Mage::helper('blog/article')->__('ID'),
-         'align'     => 'right',
+         'align'     => 'center',
          'width'     => '50px',
          'index'     => 'article_id',
         ));
@@ -32,8 +32,28 @@ class Snowcore_Blog_Block_Adminhtml_Article_Grid extends Mage_Adminhtml_Block_Wi
          'index'     => 'content',
         ));
 
+        $this->addColumn('created_date', array(
+            'header'    => Mage::helper('blog/article')->__('Created'),
+            'align'     => 'right',
+            'width'     => '150px',
+            'index'     => 'created_date',
+        ));
         return parent::_prepareColumns();
     }
+
+    protected function _prepareMassaction()
+    {
+        $this->setMassactionIdField('article_id');
+        $this->getMassactionBlock()->setFormFieldName('articles');
+
+        $this->getMassactionBlock()->addItem('delete', array(
+            'label' => $this->__('Delete'),
+            'url' => $this->getUrl('*/*/massDelete'),
+        ));
+        return $this;
+    }
+
+
 
     public function getRowUrl($row)
     {
