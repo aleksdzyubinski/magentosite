@@ -35,7 +35,7 @@ class Snowcore_Blog_Adminhtml_ArticleController extends Mage_Adminhtml_Controlle
         $this->_redirect('*/*');
     }
 
-
+/*
     public function newAction()
     {
         $this->_forward('edit');
@@ -49,21 +49,5 @@ class Snowcore_Blog_Adminhtml_ArticleController extends Mage_Adminhtml_Controlle
         $this->loadLayout()->_setActiveMenu('blog');
         $this->_addContent($this->getLayout()->createBlock('blog/adminhtml_articles'));
         $this->renderLayout();
-    }
-
-    public function deleteAction()
-    {
-        if ($id = $this->getRequest()->getParam('id')) {
-            try {
-                Mage::getModel('blog/article')->setId($id)->delete();
-                Mage::getSingleton('adminhtml/session')->addSuccess($this->__('Feedback was deleted successfully'));
-            } catch (Exception $e) {
-                Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
-                $this->_redirect('*/*/edit', array('id' => $id));
-            }
-        }
-        $this->_redirect('*/*/');
-    }
-
-
+    }*/
 }

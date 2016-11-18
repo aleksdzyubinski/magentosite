@@ -11,6 +11,7 @@ class Snowcore_Blog_Block_Article extends Mage_Core_Block_Template
     {
         parent::__construct();
         $collection = Mage::getModel('blog/article')->getCollection();
+
         $this->setCollection($collection);
     }
 

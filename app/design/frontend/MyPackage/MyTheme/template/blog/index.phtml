@@ -11,11 +11,11 @@ $collection->setOrder('created_date', 'DESC');?>
     <div style="padding-top: 30px; margin: 0 auto">
     <?php foreach ($collection as $item): ?>
         <div class="hero">
-            <?php echo $item['content']; ?>
+            <?php echo $item->getContent(); ?>
         </div>
         <div id="customers-name">
-            <?php $customer = Mage::getModel('customer/customer')->load($item['customer_id']); ?>
-            <?php echo  $customer->getData('firstname') . ' ' . $customer->getData('lastname'); ?>
+            <?php $customer = Mage::getModel('customer/customer')->load($item->getCustomerId()); ?>
+            <?php echo  $customer->getName(); ?>
         </div>
     <?php endforeach; ?>
     </div>
