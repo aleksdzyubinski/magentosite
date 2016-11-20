@@ -11,7 +11,7 @@ class Snowcore_Blog_Block_Article extends Mage_Core_Block_Template
     {
         parent::__construct();
         $collection = Mage::getModel('blog/article')->getCollection();
-
+        $collection->setOrder('created_date', 'DESC');
         $this->setCollection($collection);
     }
 
@@ -22,7 +22,7 @@ class Snowcore_Blog_Block_Article extends Mage_Core_Block_Template
         $pager->setAvailableLimit(array(5=>5,10=>10,'all'=>'all'));
         $pager->setCollection($this->getCollection());
         $this->setChild('pager', $pager);
-        $this->getTestimonialsCollection()->load();
+        $this->getCollection()->load();
         return $this;
     }
 
@@ -31,18 +31,15 @@ class Snowcore_Blog_Block_Article extends Mage_Core_Block_Template
         return $this->getChildHtml('pager');
     }
 
-    public function getTestimonialsCollection()
+    public function showTopPage()
     {
-        $testimonialsCollection = Mage::getModel('blog/article')->getCollection();
-        $testimonialsCollection->setOrder('created_date', 'DESC');
-        return $testimonialsCollection;
-    }
-
-    public function showButton()
-    {
+        echo '<div class="top-page-container">';
+        echo "<h1>Testimonials</h1> 
+                </div>";
         if (Mage::getSingleton('customer/session')->isLoggedIn())
         {
             echo '<button class="submit-button">SUBMIT YOUR TESTIMONIAL</button>';
+            echo '<textarea id="text-enter" rows="5" cols="100%"></textarea>';
         }
         else{
             echo '<div id="login-text">';
