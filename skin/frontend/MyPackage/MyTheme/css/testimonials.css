@@ -81,13 +81,13 @@ select {
 	text-transform: uppercase;
 }
 
-.testimonials-text{
+.top-page-container{
 	float: left;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
-.testimonials-text h1{
+.top-page-container h1{
 	color: black;
 	padding-bottom: 0px;
 }
@@ -100,4 +100,9 @@ select {
 	border: 0px;
 	font-weight: bold;
 	padding: 7px;
+}
+
+#text-enter{
+	width: 100%;
+	margin-top: 20px 0px 20px 0px;
 }
